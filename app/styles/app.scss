@@ -1,0 +1,113 @@
+// =========================================================== Global ============================================================
+
+$primary_color: #057EA6;
+
+@import "reset"; //Febreze bros, a fresh start.
+@import "mixins";
+@import "fonts";
+
+h1, h2, h3, h4, h5{
+  @include oswald;
+}
+body{
+ @include opensans;
+ h1{
+  font-size: 3rem;
+  margin: 10px 0;
+ }
+ h2{
+    font-size: 2.5rem;
+    margin: 4px 0;
+    line-height: 3.5rem;
+  }
+  h3{
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+  h4{
+    font-size: 1.4rem;
+  }
+  p{
+    line-height: 25px;
+    padding: 10px 0;
+    &:empty{
+      padding: 0;
+      line-height: 0;
+    }
+  }
+  a{
+    color: $primary_color;
+    text-decoration: none;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  blockquote{
+    margin: 20px 0 20px 40px;
+    border-left: 4px solid #ddd;
+    padding-left: 10px;
+    font-family: arial, sans-serif;
+    color: #5C5C5C;
+    p{
+      padding: 3px 0;
+    }
+  }
+  input,
+  textarea{
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 6px;
+  }
+  pre{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    color: #333;
+    background: #f8f8f8;
+    -webkit-text-size-adjust: none;
+    padding: 15px;
+    code {
+      padding: 0;
+      border: none;
+    }
+  }
+  code{
+    color: #333;
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background: #f8f8f8;
+    padding: 5px;
+    border: 1px solid #EAEAEA;
+  }
+}
+.btn{
+  background: $primary_color;
+  border: 1px solid lighten($primary_color, 14%);
+  border-radius: 6px;
+  padding: 6px 14px;
+  color: white;
+  cursor: pointer;
+}
+.hide{
+  display: none;
+}
+
+.screen-reader{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+// =========================================================== Container ============================================================
+
+body {
+  background-color: $primary_color;
+  color: white;
+}
+
+.inner-container{
+  max-width: 1140px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
