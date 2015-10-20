@@ -1,4 +1,4 @@
 export default [
-  'my-first-slide',
-  'my-second-slide'
+  'title',
+  'im-robert'
 ];
