@@ -122,13 +122,18 @@ body {
   flex-flow: column;
 }
 
-.title--single {
+.title {
   font-size: 7rem;
+  text-align: center;
+  line-height: 9rem;
 }
 
-.title--single__subtitle {
-  font-size: 7rem;
+.title--long {
+  @extend .title;
+  font-size: 6rem;
+  line-height: 7rem;
 }
+
 .subtitle {
   font-size: 3rem;
   margin-top: 15px;
