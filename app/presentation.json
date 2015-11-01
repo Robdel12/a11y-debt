@@ -44,5 +44,9 @@
   "no-long-running-giant-branches",
   "slowly-and-in-small-chunks-refactor-your-code-to-be-accessible",
   "an-inaccessible-website-is-technical-debt",
-  "lets-take-a-look-at-some-common-examples"
+  "lets-take-a-look-at-some-common-examples",
+  "images-without-alts",
+  "make-sure-page-titles-are-unique",
+  "add-a-language-attr",
+  "input-with-labels"
 ]
