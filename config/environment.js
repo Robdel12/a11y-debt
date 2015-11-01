@@ -4,8 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'a11y-debt',
     environment: environment,
-    baseURL: '/a11y-debt',
-    locationType: 'hash',
+    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -40,6 +39,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.locationType = 'hash';
     ENV.baseURL = '/a11y-debt';
   }
 
