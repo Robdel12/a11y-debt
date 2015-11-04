@@ -29,7 +29,7 @@ export default Ember.Route.extend({
   },
 
   activate() {
-    $(window).on('keyup.SlideRoute', (e)=> {
+    $(window).on('keydown.SlideRoute', (e)=> {
       switch (e.keyCode) {
       case 37:
         this.move(-1);
@@ -42,6 +42,6 @@ export default Ember.Route.extend({
   },
 
   deactivate() {
-    $(window).off('keyup.SlideRoute');
+    $(window).off('keydown.SlideRoute');
   }
 });
