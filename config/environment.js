@@ -39,8 +39,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
     ENV.baseURL = '/a11y-debt';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
