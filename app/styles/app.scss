@@ -222,6 +222,26 @@ ul {
   width: 80vw;
   height: 80vh;
 }
+/* HACK! */
+.chosen-container .chosen-results li {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.dk-select {
+  color: black;
+}
+
+.dk-option {
+  color: black !important;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.demo-div {
+  width: 40%;
+}
 
 @media only screen and (max-device-width: 375px) {
   html {
