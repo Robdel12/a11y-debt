@@ -217,6 +217,12 @@ ul {
   width: 80%;
 }
 
+.blank-box {
+  background: black;
+  width: 80vw;
+  height: 80vh;
+}
+
 @media only screen and (max-device-width: 375px) {
   html {
     font-size: 50%;

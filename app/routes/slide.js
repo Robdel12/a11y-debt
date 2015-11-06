@@ -60,18 +60,21 @@ export default Ember.Route.extend({
     let xDown = Ember.get(this, 'xDown');
     let yDown = Ember.get(this, 'yDown');
 
-    if ( ! xDown || ! yDown ) {
+    evt.preventDefault();
+
+    if (!xDown || !yDown) {
       return;
     }
 
     var xUp = evt.touches[0].clientX;
     var yUp = evt.touches[0].clientY;
-
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
+    var totalDiff = Math.abs(xDiff) + Math.abs(yDiff);
 
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-      if ( xDiff > 0 ) {
+
+    if(totalDiff > 15) {
+      if(xDiff > 0) {
         this.move(1);
       } else {
         this.move(-1);
