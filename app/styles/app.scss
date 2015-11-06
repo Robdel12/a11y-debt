@@ -107,13 +107,6 @@ body{
 
 // =========================================================== Container ============================================================
 
-/* .ember-view, */
-/* html, */
-/* body, */
-/* .main-container{ */
-/*   height: 100%; */
-/* } */
-
 body {
   background-color: $primary_color;
   color: white;
@@ -152,7 +145,7 @@ body {
 }
 
 .page-counter {
-  font-size: 24px;
+  font-size: 1.6rem;
   text-align: right;
   padding-right: 2%;
 }
@@ -222,4 +215,22 @@ ul {
 
 .video {
   width: 80%;
+}
+
+@media only screen and (max-device-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+
+  .inner-container {
+    height: 80vh;
+  }
+  pre {
+    max-width: 80%;
+    margin: 0 auto;
+
+    code {
+      font-size: 1rem;
+    }
+  }
 }
