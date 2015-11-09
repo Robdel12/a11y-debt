@@ -1,7 +1,7 @@
 {{route-announcer}}
-<div class="main-container">
-  <div class="inner-container">
-    {{outlet}}
-  </div>
-  {{page-counter}}
+<div class="move-forward" {{action "moveForward"}}></div>
+<div class="inner-container">
+  {{outlet}}
 </div>
+<div class="move-backward" {{action "moveBackward"}}></div>
+{{page-counter}}

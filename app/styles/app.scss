@@ -242,10 +242,47 @@ ul {
 .demo-div {
   width: 40%;
 }
+.move {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 15vw;
+  height: 100vh;
+}
 
-@media only screen and (max-device-width: 375px) {
+.move-forward {
+  @extend .move;
+  cursor: w-resize;
+  left: 0;
+}
+
+.move-backward {
+  @extend .move;
+  cursor: e-resize;
+  right: 0;
+}
+
+@media only screen and (max-width: 375px) {
   html {
     font-size: 50%;
+  }
+
+  .inner-container {
+    height: 80vh;
+  }
+  pre {
+    max-width: 80%;
+    margin: 0 auto;
+
+    code {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 736px) {
+  html {
+    font-size: 58%;
   }
 
   .inner-container {

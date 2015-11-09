@@ -8,6 +8,14 @@ export default Ember.Route.extend({
   yDown: null,
 
   pageTracker: Ember.inject.service('page-tracker'),
+  announcer: Ember.inject.service('announcer'),
+
+  init() {
+    this._super.apply(this, arguments);
+
+    this.get('announcer').set('message', "");
+  },
+
   model(params) {
     var index = presentation.indexOf(params.id);
     this.get('pageTracker').set('currentPage', index + 1);
@@ -83,5 +91,17 @@ export default Ember.Route.extend({
     /* reset values */
     Ember.set(this, 'xDown', null);
     Ember.set(this, 'yDown', null);
+  },
+
+  actions: {
+    moveForward() {
+      this.move(1);
+      return false;
+    },
+
+    moveBackward() {
+      this.move(-1);
+      return false;
+    }
   }
 });
