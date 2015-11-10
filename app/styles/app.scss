@@ -248,7 +248,7 @@ ul {
   -webkit-appearance: none;
   position: absolute;
   top: 0;
-  width: 15vw;
+  width: 6vw;
   height: 100vh;
 }
 
@@ -292,6 +292,10 @@ ul {
     }
   }
 
+  .move {
+    width: 15vw;
+  }
+
   .example-image {
     width: 90%;
   }
@@ -313,6 +317,10 @@ ul {
     code {
       font-size: 1rem;
     }
+  }
+
+  .move {
+    width: 15vw;
   }
 
   .example-image {
