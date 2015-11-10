@@ -40,8 +40,9 @@ export default Ember.Route.extend({
   },
 
   activate() {
-    document.addEventListener('touchstart', Ember.run.bind(this, this.handleTouchStart), false);
-    document.addEventListener('touchmove', Ember.run.bind(this, this.handleTouchMove), false);
+    // come back and add this with a better soultion. This currently is grab.
+    // document.addEventListener('touchstart', Ember.run.bind(this, this.handleTouchStart), false);
+    // document.addEventListener('touchmove', Ember.run.bind(this, this.handleTouchMove), false);
 
     $(window).on('keydown.SlideRoute', (e) => {
       switch (e.keyCode) {
@@ -68,8 +69,6 @@ export default Ember.Route.extend({
     let xDown = Ember.get(this, 'xDown');
     let yDown = Ember.get(this, 'yDown');
 
-    evt.preventDefault();
-
     if (!xDown || !yDown) {
       return;
     }
@@ -95,13 +94,14 @@ export default Ember.Route.extend({
 
   actions: {
     moveForward() {
+      console.log('tapped');
       this.move(1);
-      return false;
+      // return false;
     },
 
     moveBackward() {
       this.move(-1);
-      return false;
+      // return false;
     }
   }
 });

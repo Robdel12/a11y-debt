@@ -1,7 +1,7 @@
 {{route-announcer}}
-<div class="move-forward" {{action "moveForward"}}></div>
+<button class="move-forward" tabindex="0" {{action "moveForward"}}><div class="screen-reader">Move Forward</div></button>
 <div class="inner-container">
   {{outlet}}
 </div>
-<div class="move-backward" {{action "moveBackward"}}></div>
+<button class="move-backward" tabindex="0" {{action "moveBackward"}}><div class="screen-reader">Move Backward</div></button>
 {{page-counter}}
