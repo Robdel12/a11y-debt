@@ -52,6 +52,11 @@ export default Ember.Route.extend({
       case 39:
         this.move(1);
         break;
+      case 33:
+        this.move(-1); //Page down (presenter remote)
+        break;
+      case 34:
+        this.move(1); //Page up (presenter remote)
       }
     });
   },
