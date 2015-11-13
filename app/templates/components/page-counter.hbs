@@ -1,1 +1,3 @@
-<div class="page-counter">{{pageTracker.currentPage}} / {{totalPages}}</div>
+{{#if isProduction}}
+  <div class="page-counter">{{pageTracker.currentPage}} / {{totalPages}}</div>
+{{/if}}
